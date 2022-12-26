@@ -33,7 +33,7 @@ fn calculate_hash<T: Hash>(t: &T) -> u64 {
 
 fn random_wait() {
     let mut rng = rand::thread_rng();
-    let normal = rand_distr::Normal::new(1500., 7500.).unwrap();
+    let normal = rand_distr::Normal::new(1500., 86.).unwrap();
     let random_ = normal.sample(&mut rng).round() as i64;
     let time_millis: u64 = max(random_, 800) as u64;
     println!("Waiting {} millis seconds", time_millis);
